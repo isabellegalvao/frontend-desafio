@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Teste</title>
+    <title>Search</title>
 
     <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
@@ -18,6 +18,7 @@
     <div class="wrapper">
         <div class="search">
             <form action="" class="search__form">
+                <!-- Buscar por usuário -->
                 <div class="search__form-group">
                     <label for="user" class="search__label">Buscar por um usuário</label>
                     <input type="text" class="search__input" id="user" name="username" placeholder="janedoe">
@@ -26,8 +27,12 @@
                     <button class="button search__button">Buscar</button>
                 </div>
             </form>
+            <!-- Buscar por usuário -->
+
             <div class="user user--hidden">
+                <!-- Template usuário -->
                 <div class="user__profile">
+                    <!-- Informações do usuário -->
                     <figure class="user__avatar-box">
                         <img src="" alt="avatar" class="user__avatar" data-js-avatar>
                     </figure>
@@ -50,10 +55,12 @@
                         </div>
                     </div>
                 </div>
+                <!-- Informações do usuário -->
                 <div class="user__repos">
+                    <!-- Repositórios do usuário -->
                     <div class="user__repos-header">
                         <p>Repositórios</p>
-                        <button class="button order__button" data-order="true">
+                        <button class="button order__button" data-order="true"><!-- Botão de ordenar repositórios -->
                             <span>
                                 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
                                     version="1.1" id="Capa_1" x="0px" y="0px" viewBox="0 0 294.842 294.842" style="enable-background:new 0 0 294.842 294.842;"
@@ -70,9 +77,12 @@
                             </span>
                             Ordenar
                         </button>
+                        <!-- Botão de ordenar repositórios -->
                     </div>
                 </div>
+                <!-- Repositórios do usuário -->
             </div>
+            <!-- Template usuário -->
         </div>
     </div>
     <script src="script/jquery-3.3.1.min.js"></script>
