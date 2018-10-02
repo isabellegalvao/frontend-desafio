@@ -1,0 +1,299 @@
+
+* {
+    box-sizing: border-box;
+    margin: 0%;
+    padding: 0;
+}
+
+body {
+    font-family: 'Open Sans', Arial, Helvetica, sans-serif;
+    font-size: 16px;
+}
+
+a{
+    color: inherit;
+    text-decoration: none;
+}
+
+header{
+    background-color: #24292e;    
+    padding: 20px 0;
+}
+
+h1{
+    text-align: center;
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+}
+
+.wrapper{
+    width: 70%;
+    margin: 30px auto;
+}
+
+.search__form-group{
+    position: relative;
+    width: 100%;
+}
+
+.search__label{
+    display: block;
+}
+
+.search__input{
+    width: 100%;
+    min-height: 34px;
+    padding: 6px 8px;
+    font-size: 16px;
+    line-height: 20px;
+    color: #24292e;
+    vertical-align: middle;
+    background-color: #fff;
+    background-repeat: no-repeat;
+    background-position: right 8px center;
+    border: 1px solid #d1d5da;
+    border-radius: 3px;
+    outline: none;
+    box-shadow: inset 0 1px 2px rgba(27,31,35,0.075);
+}
+
+.search__button {   
+    display: inline-block;
+    padding: 10px 15px 11px;
+    font-size: 13px;
+    font-weight: 500;
+    letter-spacing: .02em;
+    cursor: pointer;
+    border: none;
+    border-radius: 4px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    position: relative;
+    color: #777;
+    background: none;
+    -webkit-box-shadow: 0px 0px 0px 1px #bbb inset;
+    box-shadow: 0px 0px 0px 1px #bbb inset;
+    transition: 0.3s;
+    margin-top: 5px;
+}
+
+.search__button:hover{
+    color: #444;
+    background: none;
+    -webkit-box-shadow: 0px 0px 0px 1px #777 inset;
+    box-shadow: 0px 0px 0px 1px #777 inset;
+    transition: 0.3s;
+}
+
+/* USER */
+
+.user {
+    border-top: 1px solid;
+    padding: 30px 0 0;
+    margin: 30px 0 0;
+}
+
+.user--visible{
+    opacity: 1;
+    height: auto;
+    overflow: hidden;
+    pointer-events: all;
+    transition: 0.5s;
+}
+
+.user--hidden{
+    opacity: 0;
+    height: 0;
+    overflow: hidden;
+    pointer-events: none;
+    transition: 0.5s;
+}
+
+.user__profile {
+    display: flex;
+}
+
+.user__infos-header .user__infos-item{
+    display: block;
+}
+
+.user__name{
+    font-weight: bold;
+}
+
+.user__username{
+    font-size: 0.8em;
+    color: gray;
+    margin-bottom: 5px
+}
+
+.user__bio{
+    font-size: 0.9em;
+}
+
+.user__username::before{
+    content: "@";
+    color: inherit;
+}
+
+.user__followers,
+.user__following{
+    font-size: 0.8em;
+}
+
+.user__followers{
+    margin-right: 15px;
+}
+
+.user__infos-footer{
+    display: flex;
+}
+
+.user__infos-footer .user__infos-item{
+    background: lightgray;
+    border-radius: 50px;
+    padding: 5px 10px;
+}
+
+.user__avatar-box{
+    width: 150px;
+    height: 150px;
+    overflow: hidden;
+}
+
+.user__avatar{
+    max-width: 100%;
+} 
+
+.user__infos {
+    margin-left: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+}
+
+.user__repos{
+    margin: 15px -5px;
+}
+
+.button{
+    display: inline-block;
+    padding: 10px 15px 11px;
+    font-weight: 500;
+    font-size: 13px;
+    letter-spacing: .02em;
+    background: white;
+    border: none;
+    border-radius: 4px;
+    position: relative;
+    color: #777;
+    -webkit-box-shadow: 0px 0px 0px 1px #bbb inset;
+    box-shadow: 0px 0px 0px 1px #bbb inset;
+    transition: 0.3s;
+}
+
+.button:hover{
+    color: #444;
+    background: none;
+    -webkit-box-shadow: 0px 0px 0px 1px #777 inset;
+    box-shadow: 0px 0px 0px 1px #777 inset;
+    transition: 0.3s;
+}
+
+.user__repos .button{
+    margin: 5px;
+}   
+
+.user__repos-header {
+    margin: 0 5px 15px;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid;
+    padding: 5px 0;
+}
+
+.user__repos-header svg{
+    height: 13px;
+}
+
+.user__repos-header button{    
+    font-size: inherit;
+    border: none;
+    background: 0 0;
+    cursor: pointer;
+}
+
+.user__repos-header button[data-order="false"] svg{ 
+    -moz-transform: scaleY(-1);
+    -o-transform: scaleY(-1);
+    -webkit-transform: scaleY(-1);
+    transform: scaleY(-1);
+    filter: FlipV;
+    -ms-filter: "FlipV";
+}
+
+/*REPOSITORIO*/
+
+.repository__infos-item + .repository__infos-item {
+    margin-top: 15px;
+}
+
+.repository__infos-item span{
+    background: lightgray;
+    border-radius: 50px;
+    padding: 0 15px;    
+    margin-left: 5px;
+}
+
+.repository__name{
+    font-weight: bold;
+    font-size: 1.5em;
+    display: block;
+}
+
+.repository__desc{
+    display: block;
+}
+
+.repository__link{
+    margin: 15px 0;
+}
+
+
+/*RESPONSIVO*/
+
+@media screen and (max-width: 640px){
+    .wrapper {
+        width: 85%;
+    }
+
+    .search__button{
+        width: 100%;
+    }
+
+    .user__profile{
+        flex-direction: column;
+    }
+
+    .user__avatar-box{
+        width: 300px;
+        height: 300px;
+        margin: 0 auto 15px;
+    }
+
+    .user__infos{
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    .user__infos-footer{
+        margin-top: 15px
+    }
+
+    .user__repos {
+        text-align: center;
+    }
+}
